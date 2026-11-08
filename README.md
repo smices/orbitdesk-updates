@@ -6,9 +6,9 @@
 
 ## 安装
 
-在 Releases 下载适配架构的 Mac App ZIP，解压到用户的 Applications 文件夹。首个本地验证包适用 Apple Silicon / macOS 13 及以上；Intel 包以对应发布资产为准。
+在 Releases 下载适配架构的 Mac App ZIP，解压到用户的 Applications 文件夹。1.0.0 发行包适用 Apple Silicon / macOS 13 及以上；Intel 尚无真机验收，包以对应发布资产为准。
 
-打开菜单栏「软件与设备更新…」即可检查稳定版本。Mac 更新由 Sparkle 2.10.0 校验按架构提供的 Ed25519 签名 appcast 与 ZIP；后台自动检查与安装关闭。当前预览发行使用本地 ad-hoc 签名，不能等同于 Apple Developer ID 公证。
+打开菜单栏「软件与设备更新…」即可检查稳定版本。Mac 更新由 Sparkle 2.10.0 校验按架构提供的 Ed25519 签名 appcast 与 ZIP；后台自动检查与安装关闭。当前正式发行使用本地 ad-hoc 签名，不能等同于 Apple Developer ID 公证。
 
 ## 圆屏
 
@@ -22,6 +22,6 @@ Wi‑Fi 更新需在设备打开「Mac 监控」，使用当前 IP 与 PIN。设
 
 ## 发布状态
 
-当前 0.2.7 / Mac Build 22 为预览版，ARM64 发行含首次安装说明、签名 appcast，共 12 项白名单资产；尚无最新稳定版。当前安装的 Mac App 已通过真实 Sparkle 在线更新由 19 升至 22，旧进程退出、同一安装路径新进程启动，签名、公开 ZIP 一致性和窗口重开检查通过；该测试使用版本化预览 feed，产品固定 latest 频道尚未验收。圆屏已完成完整恢复备份、四段写入回读及 TF 字体验证，通过 USB 装入 0.2.5 的 GitHub 长重定向发送缓冲修复。后续无线请求仍遇设备端 TLS 新连接超时，换网复测未执行，设备保留 0.2.5；OTA 完成与受控回滚没有通过结论，因此继续保持预览。Mac 下载链路已恢复；Mac 的 Ed25519 签名不代表固件也执行该验签。
+当前 1.0.0 / Mac Build 23 为正式版，进入 latest 稳定频道；ARM64 发行含首次安装说明及签名 appcast，共 12 项白名单资产。旧预览 release/tag 和发行说明清理，历史验证记录与本机恢复备份保留。Mac 已通过真实 Sparkle SDK 在线更新 Build 19→22，包含旧进程退出、同一安装路径新进程启动、签名、公开 ZIP 一致性及窗口重开检查；该测试使用版本化 feed，本轮产品菜单 latest 更新 22→23 尚待发行后核对。圆屏仍运行 USB 安装的 0.2.5 长重定向修复版；无线请求遇设备端 TLS 连接超时，换网络复测未执行，OTA 完成及受控回滚没有通过结论。正式发行不改变这些验收限制。Mac 的 Ed25519 更新签名不代表固件也执行该验签；没有 Apple Developer ID 证书或 Apple 公证。私有源码未推送，云端 CI 未运行。
 
 首次安装请同时下载同版 `OrbitDesk-macOS-FIRST-INSTALL.txt` 并核对 `SHA256SUMS`。M1 及以后使用 arm64 包，最低 macOS 13；退出旧版、解压并拖入“应用程序”，尝试打开一次，再到“系统设置 → 隐私与安全性 → 仍要打开”授权。macOS 13/14 使用此路径，15+ 不使用 Control-click 绕过。遇恶意软件、将损坏电脑或文件损坏提示应停止核对。无需清除 quarantine 或关闭全局安全保护。当前主机 macOS 27.3 arm64 实测；13/14/15 真实 OS 尚未实测，不能承诺所有 M 系列及更新系统均通过。官方说明：[Apple](https://support.apple.com/zh-cn/102445)、[macOS 15](https://developer.apple.com/news/?id=saqachfa)、[Sparkle](https://sparkle-project.org/documentation/)。
