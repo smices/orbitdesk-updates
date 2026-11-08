@@ -22,4 +22,6 @@ Wi‑Fi 更新需在设备打开「Mac 监控」，使用当前 IP 与 PIN。设
 
 ## 发布状态
 
-0.2.2 与 0.2.3 / Mac Build 18 为预览版，尚无最新稳定版。目标圆屏已实际从旧版迁移到 0.2.2，备份、各段回读和字体校验通过，NVS 与 TF 媒体保留。Mac Build 18 已在本地安装并通过签名与窗口检查；这不是 Sparkle 在线升级验收。圆屏已接受 0.2.3 OTA 请求，但 GitHub TLS 连接超时，仍运行 0.2.2；无线完成、Sparkle 在线安装及失败/回滚仍待网络恢复后实测，Intel 未实测。Mac 的 Ed25519 签名不代表固件也执行该验签。当前 GitHub 下载路径出现 504，尚不能完成安装验收。
+当前 0.2.4 / Mac Build 19 为预览版，ARM64 发行含首次安装说明、签名 appcast，共 12 项白名单资产；尚无最新稳定版。目标圆屏已实际从旧版迁移到 0.2.2，备份、各段回读和字体校验通过，NVS 与 TF 媒体保留。Mac Build 19 已在本地安装并通过签名与窗口检查；这不是 Sparkle 在线升级验收。圆屏已接受 0.2.3 OTA 请求，但 GitHub TLS 连接超时，仍运行 0.2.2；无线完成、Sparkle 在线安装及失败/回滚仍待网络恢复后实测，Intel 未实测。Mac 的 Ed25519 签名不代表固件也执行该验签。当前 GitHub 下载路径出现 504，尚不能完成安装验收。
+
+首次安装请同时下载同版 `OrbitDesk-macOS-FIRST-INSTALL.txt` 并核对 `SHA256SUMS`。M1 及以后使用 arm64 包，最低 macOS 13；退出旧版、解压并拖入“应用程序”，尝试打开一次，再到“系统设置 → 隐私与安全性 → 仍要打开”授权。macOS 13/14 使用此路径，15+ 不使用 Control-click 绕过。遇恶意软件、将损坏电脑或文件损坏提示应停止核对。无需清除 quarantine 或关闭全局安全保护。当前主机 macOS 27.3 arm64 实测；13/14/15 真实 OS 尚未实测，不能承诺所有 M 系列及更新系统均通过。官方说明：[Apple](https://support.apple.com/zh-cn/102445)、[macOS 15](https://developer.apple.com/news/?id=saqachfa)、[Sparkle](https://sparkle-project.org/documentation/)。
