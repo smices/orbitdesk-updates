@@ -22,6 +22,6 @@ Wi‑Fi 更新需在设备打开「Mac 监控」，使用当前 IP 与 PIN。设
 
 ## 发布状态
 
-当前 0.2.4 / Mac Build 19 为预览版，ARM64 发行含首次安装说明、签名 appcast，共 12 项白名单资产；尚无最新稳定版。目标圆屏已实际从旧版迁移到 0.2.2，备份、各段回读和字体校验通过，NVS 与 TF 媒体保留。Mac Build 19 已在本地安装并通过签名与窗口检查；这不是 Sparkle 在线升级验收。圆屏已接受 0.2.3 OTA 请求，但 GitHub TLS 连接超时，仍运行 0.2.2；无线完成、Sparkle 在线安装及失败/回滚仍待网络恢复后实测，Intel 未实测。Mac 的 Ed25519 签名不代表固件也执行该验签。当前 GitHub 下载路径出现 504，尚不能完成安装验收。
+当前 0.2.7 / Mac Build 22 为预览版，ARM64 发行含首次安装说明、签名 appcast，共 12 项白名单资产；尚无最新稳定版。当前安装的 Mac App 已通过真实 Sparkle 在线更新由 19 升至 22，旧进程退出、同一安装路径新进程启动，签名、公开 ZIP 一致性和窗口重开检查通过；该测试使用版本化预览 feed，产品固定 latest 频道尚未验收。圆屏已完成完整恢复备份、四段写入回读及 TF 字体验证，通过 USB 装入 0.2.5 的 GitHub 长重定向发送缓冲修复。后续无线请求仍遇设备端 TLS 新连接超时，换网复测未执行，设备保留 0.2.5；OTA 完成与受控回滚没有通过结论，因此继续保持预览。Mac 下载链路已恢复；Mac 的 Ed25519 签名不代表固件也执行该验签。
 
 首次安装请同时下载同版 `OrbitDesk-macOS-FIRST-INSTALL.txt` 并核对 `SHA256SUMS`。M1 及以后使用 arm64 包，最低 macOS 13；退出旧版、解压并拖入“应用程序”，尝试打开一次，再到“系统设置 → 隐私与安全性 → 仍要打开”授权。macOS 13/14 使用此路径，15+ 不使用 Control-click 绕过。遇恶意软件、将损坏电脑或文件损坏提示应停止核对。无需清除 quarantine 或关闭全局安全保护。当前主机 macOS 27.3 arm64 实测；13/14/15 真实 OS 尚未实测，不能承诺所有 M 系列及更新系统均通过。官方说明：[Apple](https://support.apple.com/zh-cn/102445)、[macOS 15](https://developer.apple.com/news/?id=saqachfa)、[Sparkle](https://sparkle-project.org/documentation/)。
