@@ -36,4 +36,4 @@ Wi‑Fi 更新需在设备打开「Mac 监控」，使用当前 IP 与 PIN。设
 
 首次安装请同时下载同版 `OrbitDesk-macOS-FIRST-INSTALL.txt` 并核对 `SHA256SUMS`。M1 及以后使用 arm64 包，最低 macOS 13；退出旧版、解压并拖入“应用程序”，尝试打开一次，再到“系统设置 → 隐私与安全性 → 仍要打开”授权。macOS 13/14 使用此路径，15+ 不使用 Control-click 绕过。遇恶意软件、将损坏电脑或文件损坏提示应停止核对。无需清除 quarantine 或关闭全局安全保护。本机 arm64 的 1.0.5 构建、自检和签名门禁通过；13/14/15 真实 OS 尚未实测，不能承诺所有 M 系列及更新系统均通过。官方说明：[Apple](https://support.apple.com/zh-cn/102445)、[macOS 15](https://developer.apple.com/news/?id=saqachfa)、[Sparkle](https://sparkle-project.org/documentation/)。
 
-本机 Mac 已通过实际产品 Sparkle 从 Build 28 安装并自动重启至 Build 29；安装后的程序与公开 ZIP 一致，深度签名、单实例及窗口关闭重开检查通过。App 的固件检查已显示 1.0.5，本版圆屏实际 OTA 安装仍需单独验收。
+本机 Mac 已通过实际产品 Sparkle 从 Build 28 安装并自动重启至 Build 29；安装后的程序与公开 ZIP 一致，深度签名、单实例及窗口关闭重开检查通过。App 的固件检查已显示 1.0.5，圆屏已通过真实 Wi-Fi OTA 从 1.0.4 升至 1.0.5；新版本启动后观察 90.0 秒无崩溃、回溯、看门狗警告或 SD 超时，联网及 TF 挂载正常。独立运行版本读取和完整 TF 字体校验通过。
